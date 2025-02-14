@@ -1,5 +1,3 @@
-library(tidyverse)
-library(lubridate)
 
 # EU Carbon prices and Gas prices
 
@@ -9,6 +7,8 @@ library(lubridate)
 # Carbon price: search for EUETSSY1, download PX_BID, PX_ASK for all available dates between 1.1.2026 and 31.12.2023
 # Gas price: search for TTF0NXHR, download PX_LAST for all available dates between 1.1.2026 and 31.12.2023
 
+library(tidyverse)
+library(lubridate)
 
 # ETS ---------------------------------------------------------------------
 

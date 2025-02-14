@@ -1,3 +1,5 @@
+# Quantity data, from Swissgrid
+
 library(tidyverse)
 library(lubridate)
 library(stringr)
