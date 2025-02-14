@@ -3,8 +3,8 @@ library(lubridate)
 library(stringr)
 
 # from https://www.swissgrid.ch/en/home/operation/grid-data/load.html#links-downloads
-load_grid <- read.csv("Short-RunElectricityDemand/data/Load_swissgrid_2016_2023.csv")
-load_end <- read.csv("Short-RunElectricityDemand/data/Load_swissgrid_end_users_2016_2023.csv")
+load_grid <- read.csv("data/Load_swissgrid_2016_2023.csv")
+load_end <- read.csv("data/Load_swissgrid_end_users_2016_2023.csv")
 
 
 # need to aggregate into 1h intervals
@@ -46,5 +46,5 @@ load_end_2$end_quantity_swissgrid <- load_end_2$Total.end.use.kWh / 1000
 load_grid_2 %>% select(dt, quantity_swissgrid) -> load_swissgrid
 load_end_2 %>% select(dt, end_quantity_swissgrid) -> load_swissgrid_end
 
-saveRDS(load_swissgrid, "Short-RunElectricityDemand/output/swissgrid_load_2016_2023.rds")
-saveRDS(load_swissgrid_end, "Short-RunElectricityDemand/output/swissgrid_end_load_2016_2023.rds")
+saveRDS(load_swissgrid, "output/swissgrid_load_2016_2023.rds")
+saveRDS(load_swissgrid_end, "output/swissgrid_end_load_2016_2023.rds")

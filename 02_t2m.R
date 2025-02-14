@@ -18,7 +18,7 @@ library(exactextractr)
 # https://www.swisstopo.admin.ch/en/landscape-model-swissboundaries3d
 
 # load map and give GPS crs
-map <- st_read("Short-RunElectricityDemand/data/map switzerland shp/SHAPEFILE_LV95_LN02/swissBOUNDARIES3D_1_3_TLM_HOHEITSGEBIET.shp")
+map <- st_read("data/map switzerland shp/SHAPEFILE_LV95_LN02/swissBOUNDARIES3D_1_3_TLM_HOHEITSGEBIET.shp")
 map <- st_transform(map, 4326)
 map <- st_cast(map, "MULTIPOLYGON")
 
@@ -30,7 +30,7 @@ map <- st_cast(map, "MULTIPOLYGON")
 
 
 # set path and filename
-ncpath <- "Short-RunElectricityDemand/data/ERA5_Land/"
+ncpath <- "data/ERA5_Land/"
 
 # names of all nc files
 ncfiles <- dir(ncpath) %>% str_subset("2m_temperature")
@@ -144,6 +144,6 @@ plot(T2M$wm_t2m ~ T2M$dt, type = "l", lwd = 2, col = "red")
 
 
 # SAVE
-saveRDS(T2M, "Short-RunElectricityDemand/output/02_t2m_ERA5_2016_2023_LONG.rds")
+saveRDS(T2M, "output/02_t2m_ERA5_2016_2023_LONG.rds")
 
 

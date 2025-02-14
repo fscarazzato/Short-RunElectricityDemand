@@ -42,7 +42,7 @@ Price <- as.data.frame(rbind(price2016,
 
 
 
-saveRDS(Price, "Short-RunElectricityDemand/data/day_ahead_price_2016_2023.rds")
+saveRDS(Price, "data/day_ahead_price_2016_2023.rds")
 
 
 # generation by type --------------------------------------------------------
@@ -141,6 +141,6 @@ GEN_Wind_DE %>% select(start, quantity) %>%
 
 
 # save
-saveRDS(GEN_Solar, "Short-RunElectricityDemand/data/Solar_gen_2016_2023.rds")
-saveRDS(GEN_Wind_DE, "Short-RunElectricityDemand/data/Wind_gen_DE_2016_2023.rds")
+saveRDS(GEN_Solar, "data/Solar_gen_2016_2023.rds")
+saveRDS(GEN_Wind_DE, "data/Wind_gen_DE_2016_2023.rds")
 

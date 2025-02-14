@@ -13,7 +13,7 @@ library(lubridate)
 # ETS ---------------------------------------------------------------------
 
 
-ets <- read.csv("Short-RunElectricityDemand/data/ETS price 2016-2023.csv") %>% na.omit()
+ets <- read.csv("data/ETS price 2016-2023.csv") %>% na.omit()
 
 # check difference between bid and ask price 
 ets$diff <- ets$PX_ASK - ets$PX_BID
@@ -45,7 +45,7 @@ ets %>%
 
 
 # save
-saveRDS(ets, "Short-RunElectricityDemand/output/ETS_price_2016_2023.rds")
+saveRDS(ets, "output/ETS_price_2016_2023.rds")
 
 
 
@@ -74,5 +74,5 @@ gas %>%
 
 
 # save
-saveRDS(gas, "Short-RunElectricityDemand/output/Gas_price_2016_2023.rds")
+saveRDS(gas, "output/Gas_price_2016_2023.rds")
 

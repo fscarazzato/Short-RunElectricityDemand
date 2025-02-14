@@ -8,7 +8,7 @@ wf_set_key(user ="user_id_here", key = "API_key_here", service = "cds")
 
 
 # destination folder
-ph <- "Short-RunElectricityDemand/data/ERA5_Land" 
+ph <- "data/ERA5_Land" 
 # variable (one at a time)
 #vr <- c("2m_temperature")
 #vr <- c("total_precipitation")
