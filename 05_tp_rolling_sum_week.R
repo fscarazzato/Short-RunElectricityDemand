@@ -34,10 +34,58 @@ roll_sum(TP$tp_diff_2289, weights = w, fill = NA, align = "right") -> TP$rolling
 roll_sum(TP$tp_diff_2020, weights = w, fill = NA, align = "right") -> TP$rolling_tp_2020_week
 roll_sum(TP$tp_diff_2265, weights = w, fill = NA, align = "right") -> TP$rolling_tp_2265_week
 roll_sum(TP$tp_diff_all, weights = w, fill = NA, align = "right") -> TP$rolling_tp_week
-
 # weighted by capacity
 roll_sum(TP$tp_diff_ror_wght, weights = w, fill = NA, align = "right") -> TP$rolling_tp_week_capacity
 
+# one week lag
+TP$rolling_tp_2174_week_lag1 <- lag(TP$rolling_tp_2174_week, 181  )
+TP$rolling_tp_2289_week_lag1 <- lag(TP$rolling_tp_2289_week, 181  )
+TP$rolling_tp_2020_week_lag1 <- lag(TP$rolling_tp_2020_week, 181  )
+TP$rolling_tp_2265_week_lag1 <- lag(TP$rolling_tp_2265_week, 181  )
+TP$rolling_tp_week_lag1 <- lag(TP$rolling_tp_week, 181  )
+TP$rolling_tp_week_capacity_lag1 <- lag(TP$rolling_tp_week_capacity, 181)
+
+# two week lag
+TP$rolling_tp_2174_week_lag2 <- lag(TP$rolling_tp_2174_week, 349  )
+TP$rolling_tp_2289_week_lag2 <- lag(TP$rolling_tp_2289_week, 349  )
+TP$rolling_tp_2020_week_lag2 <- lag(TP$rolling_tp_2020_week, 349  )
+TP$rolling_tp_2265_week_lag2 <- lag(TP$rolling_tp_2265_week, 349  )
+TP$rolling_tp_week_lag2 <- lag(TP$rolling_tp_week, 349  )
+TP$rolling_tp_week_capacity_lag2 <- lag(TP$rolling_tp_week_capacity, 349)
+
+
+# three week lag
+TP$rolling_tp_2174_week_lag3 <- lag(TP$rolling_tp_2174_week, 517  )
+TP$rolling_tp_2289_week_lag3 <- lag(TP$rolling_tp_2289_week, 517  )
+TP$rolling_tp_2020_week_lag3 <- lag(TP$rolling_tp_2020_week, 517  )
+TP$rolling_tp_2265_week_lag3 <- lag(TP$rolling_tp_2265_week, 517  )
+TP$rolling_tp_week_lag3 <- lag(TP$rolling_tp_week, 517  )
+TP$rolling_tp_week_capacity_lag3 <- lag(TP$rolling_tp_week_capacity, 517)
+
+# four week lag
+TP$rolling_tp_2174_week_lag4 <- lag(TP$rolling_tp_2174_week, 685  )
+TP$rolling_tp_2289_week_lag4 <- lag(TP$rolling_tp_2289_week, 685  )
+TP$rolling_tp_2020_week_lag4 <- lag(TP$rolling_tp_2020_week, 685  )
+TP$rolling_tp_2265_week_lag4 <- lag(TP$rolling_tp_2265_week, 685  )
+TP$rolling_tp_week_lag4 <- lag(TP$rolling_tp_week, 685  )
+TP$rolling_tp_week_capacity_lag4 <- lag(TP$rolling_tp_week_capacity, 685)
+
+# five week lag
+TP$rolling_tp_2174_week_lag5 <- lag(TP$rolling_tp_2174_week, 853 )
+TP$rolling_tp_2289_week_lag5 <- lag(TP$rolling_tp_2289_week, 853 )
+TP$rolling_tp_2020_week_lag5 <- lag(TP$rolling_tp_2020_week, 853 )
+TP$rolling_tp_2265_week_lag5 <- lag(TP$rolling_tp_2265_week, 853 )
+TP$rolling_tp_week_lag5 <- lag(TP$rolling_tp_week, 853 )
+TP$rolling_tp_week_capacity_lag5 <- lag(TP$rolling_tp_week_capacity, 853)
+
+
+# six week lag
+TP$rolling_tp_2174_week_lag6 <- lag(TP$rolling_tp_2174_week, 1021)
+TP$rolling_tp_2289_week_lag6 <- lag(TP$rolling_tp_2289_week, 1021)
+TP$rolling_tp_2020_week_lag6 <- lag(TP$rolling_tp_2020_week, 1021)
+TP$rolling_tp_2265_week_lag6 <- lag(TP$rolling_tp_2265_week, 1021)
+TP$rolling_tp_week_lag6 <- lag(TP$rolling_tp_week, 1021)
+TP$rolling_tp_week_capacity_lag6 <- lag(TP$rolling_tp_week_capacity, 1021)
 
 
 # SAVE
