@@ -17,7 +17,6 @@ data <- readRDS("output/06_ready_for_estimation.rds")
 
 
 # exclude pre 2016 data
-#data <- subset(data, Year %in% c(as.character(2016:2019), as.character(2021:2023)))
 data <- subset(data, Year %in% c(as.character(2016:2023)))
 
 
